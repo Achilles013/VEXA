@@ -1,81 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D9J7PN0HL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-3D9J7PN0HL');
 </script>
+
 <meta charset="UTF-8">
 <title>VEXA — High-Ticket Closer Blueprint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 <style>
-body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background-color: #0b1c2d; color: #ffffff; overflow-x: hidden; }
-header { background-color: #081523; padding: 25px 80px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 10; }
-header img { height: 55px; }
-nav a { color: #ffffff; text-decoration: none; margin-left: 40px; font-weight: 500; }
-nav a:hover { color: #ff6f1f; }
-.hero { position: relative; padding: 120px 20px 80px; text-align: center; }
-#hero-bubbles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.hero h1 { font-size: 48px; text-shadow: 0 0 15px #1f6fff, 0 0 30px #ff6f1f; position: relative; z-index: 1; }
-.hero p { font-size: 22px; max-width: 800px; margin: auto; color: #cfd8e3; position: relative; z-index: 1; line-height: 1.6; }
-.series-label { color: #ff6f1f; font-weight: 600; margin: 25px 0 40px; position: relative; z-index: 1; }
-.buttons { position: relative; z-index: 5; margin-top: 30px; }
-.buttons img { border-radius: 12px; box-shadow: 0 0 25px #1f6fff; transition: transform .3s, box-shadow .3s; }
-.buttons img:hover { transform: scale(1.05); box-shadow: 0 0 40px #1f6fff, 0 0 20px #ff6f1f inset; }
-.section { background-color: rgba(15,36,58,0.95); padding: 90px 20px; }
-.card { background-color: #081523; max-width: 900px; margin: auto; padding: 50px; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,.4); }
-h2 { color: #ff6f1f; font-size: 34px; margin-top: 40px; }
-p { font-size: 18px; color: #cfd8e3; line-height: 1.7; }
-ul { list-style: none; padding: 0; }
-ul li { margin-bottom: 10px; font-size: 18px; color: #cfd8e3; }
-footer { background-color: #081523; padding: 40px 20px; text-align: center; color: #8fa6bf; font-size: 14px; }
-footer img { height: 40px; margin-bottom: 10px; }
-@media(max-width:600px){ header { padding: 20px; } nav a { margin-left: 15px; } .hero h1 { font-size: 32px; } .hero p, ul li { font-size: 16px; } }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0b1c2d;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #081523;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+header img {
+  height: 55px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 40px;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+nav a:hover {
+  color: #ff6f1f;
+}
+
+.hero {
+  position: relative;
+  padding: 120px 20px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#hero-bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 48px;
+  text-shadow:
+    0 0 15px #1f6fff,
+    0 0 30px #ff6f1f;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 22px;
+  max-width: 800px;
+  margin: auto;
+  color: #cfd8e3;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+}
+
+.series-label {
+  color: #ff6f1f;
+  font-weight: 600;
+  margin: 25px 0 40px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  position: relative;
+  z-index: 5;
+  margin-top: 30px;
+}
+
+.buttons img {
+  border-radius: 12px;
+  box-shadow: 0 0 25px #1f6fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+  max-width: 100%;
+}
+
+.buttons img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 40px #1f6fff,
+    0 0 20px #ff6f1f inset;
+}
+
+.section {
+  background-color: rgba(15,36,58,0.95);
+  padding: 90px 20px;
+}
+
+.card {
+  background-color: #081523;
+  max-width: 900px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,.4);
+}
+
+h2 {
+  color: #ff6f1f;
+  font-size: 34px;
+  margin-top: 40px;
+}
+
+p {
+  font-size: 18px;
+  color: #cfd8e3;
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #cfd8e3;
+  line-height: 1.5;
+}
+
+ul li::before {
+  content: "✓";
+  color: #ff6f1f;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #081523;
+  padding: 40px 20px;
+  text-align: center;
+  color: #8fa6bf;
+  font-size: 14px;
+}
+
+footer img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 800px) {
+
+  header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 90px 20px 70px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 30px 22px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p,
+  ul li {
+    font-size: 16px;
+  }
+
+}
+
+@media(max-width: 480px) {
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  nav a {
+    margin: 4px 6px;
+    font-size: 13px;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<img src="/logo.png" alt="VEXA Logo">  
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">The VEXA Standard</a>
-  <a href="products.html">Products</a>
-  <a href="trusted-ai-robotics/index.html">VEXA Trusted AI &amp; Robotics</a>
-  <a href="contact.html">Contact</a>
-</nav>
+
+  <img src="logo.png" alt="VEXA Logo">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">The VEXA Standard</a>
+    <a href="products.html">Products</a>
+    <a href="trusted-ai-robotics/index.html">VEXA Trusted AI &amp; Robotics</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
 </header>
 
-<!-- HERO -->
+
 <section class="hero">
+
   <div id="hero-bubbles"></div>
+
   <h1>VEXA High-Ticket Closer Blueprint</h1>
-  <p>Zero experience to professional closer in 90 days. A structured, ethical training system designed to build real sales skills — not hype, manipulation, or unrealistic promises.</p>
-  <div class="series-label">VEXA PROFESSIONAL TRAINING SERIES</div>
-  <div class="buttons">
-    <a href="https://www.jvzoo.com/b/115479/433067/1" target="_blank">
-      <img src="https://i.jvzoo.com/115479/433067/11" alt="Buy via JVZoo">
-      <img src="https://i.jvzoo.com/115479/433067/1" width="1" height="1" style="display:none">
-    </a>
+
+  <p>
+    Zero experience to professional closer in 90 days.
+    A structured, ethical training system designed to build
+    real sales skills — not hype, manipulation, or unrealistic promises.
+  </p>
+
+  <div class="series-label">
+    VEXA PROFESSIONAL TRAINING SERIES
   </div>
+
+  <div class="buttons">
+
+    <a
+      href="https://www.jvzoo.com/b/115479/433067/1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://i.jvzoo.com/115479/433067/11"
+        alt="Buy via JVZoo"
+      >
+
+    </a>
+
+  </div>
+
 </section>
 
-<!-- PRODUCT CONTENT -->
+
 <section class="section">
+
   <div class="card">
+
     <h2>VEXA Professional Training — Featured Product</h2>
-    <p>Built for beginners who want to understand how high-ticket sales actually work in real business environments — without pressure tactics, scripts, or false expectations.</p>
+
+    <p>
+      Built for beginners who want to understand how high-ticket
+      sales actually work in real business environments — without
+      pressure tactics, scripts, or false expectations.
+    </p>
+
 
     <h2>What This Blueprint Helps You Learn</h2>
+
     <ul>
       <li>How high-ticket sales work behind the scenes</li>
-      <li>The role of a professional closer vs setters and sales reps</li>
+      <li>The role of a professional closer vs. setters and sales reps</li>
       <li>How to diagnose client needs instead of pushing offers</li>
       <li>Ethical, pressure-free closing frameworks</li>
       <li>Handling objections with confidence and clarity</li>
@@ -83,7 +312,9 @@ footer img { height: 40px; margin-bottom: 10px; }
       <li>Positioning yourself for remote closer opportunities</li>
     </ul>
 
+
     <h2>What's Included</h2>
+
     <ul>
       <li>Up to 28-page professional PDF training manual</li>
       <li>Beginner-friendly explanations with expert-level depth</li>
@@ -95,7 +326,9 @@ footer img { height: 40px; margin-bottom: 10px; }
       <li>Ethical selling standards and decision-making tools</li>
     </ul>
 
+
     <h2>Who This Is For</h2>
+
     <ul>
       <li>Beginners exploring high-ticket sales</li>
       <li>Aspiring remote closers</li>
@@ -103,28 +336,106 @@ footer img { height: 40px; margin-bottom: 10px; }
       <li>Professionals transitioning into commission-based roles</li>
     </ul>
 
+
     <h2>Who This Is NOT For</h2>
+
     <ul>
       <li>Get-rich-quick seekers</li>
       <li>Anyone expecting guaranteed income</li>
       <li>People unwilling to practice and improve</li>
     </ul>
 
+
     <h2>Important Purchase Information</h2>
-    <p><strong>Non-Refundable Purchase:</strong><br>This is a digital product. All sales are final and non-refundable. By purchasing, you request immediate access and waive any right of withdrawal.</p>
-    <p><strong>Disclaimer:</strong><br> Please note that this product does not provide any guarantee of income or success. The results achieved by the product owner or any other individuals mentioned are not indicative of future success or earnings. This website is not affiliated with FaceBook or any of its associated entities. Once you navigate away from FaceBook, the responsibility for the content and its usage lies solely with the user. All content on this website, including but not limited to text, images, and multimedia, is protected by copyright law and the Digital Millennium Copyright Act. Unauthorized copying, duplication, modification, or theft, whether intentional or unintentional, is strictly prohibited. Violators will be prosecuted to the fullest extent of the law. We want to clarify that JVZoo serves as the retailer for the products featured on this site. JVZoo® is a registered trademark of BBC Systems Inc., a Florida corporation located at 1809 E. Broadway Street, Suite 125, Oviedo, FL 32765, USA, and is used with permission. The role of JVZoo as a retailer does not constitute an endorsement, approval, or review of these products or any claims, statements, or opinions used in their promotion.</p>
+
+    <p>
+      <strong>Digital Product:</strong><br>
+      This product is delivered digitally. Access and purchase
+      terms are provided through the checkout process.
+    </p>
+
+    <p>
+      <strong>No Income Guarantee:</strong><br>
+      This product provides educational and training material only.
+      It does not guarantee employment, income, sales results,
+      commissions, or business success. Individual results vary
+      based on experience, effort, market conditions, offer quality,
+      and other factors.
+    </p>
+
+    <p>
+      <strong>Independent Product:</strong><br>
+      VEXA is an independently developed brand and is not affiliated
+      with, endorsed by, or sponsored by Facebook, Meta, or any
+      other third party unless explicitly stated.
+    </p>
+
+    <p>
+      <strong>Third-Party Checkout:</strong><br>
+      JVZoo acts as the retailer/payment platform for the product.
+      Checkout, payment processing, and related transaction terms
+      are subject to the applicable JVZoo terms and policies.
+    </p>
+
+    <p>
+      <strong>Copyright:</strong><br>
+      All VEXA content, including written material, graphics,
+      training materials, branding, and original website content,
+      is protected by applicable intellectual property laws.
+      Unauthorized reproduction or redistribution is prohibited.
+    </p>
+
   </div>
+
 </section>
 
+
 <footer>
- <img src="/logo.png" alt="VEXA Logo">
-  <div>© 2026 VEXA. All rights reserved.</div>
+
+  <img src="logo.png" alt="VEXA Logo">
+
+  <div>
+    © 2026 VEXA. All rights reserved.
+  </div>
+
 </footer>
 
+
 <script>
+
 tsParticles.load("hero-bubbles", {
-  particles: { number: { value: 25 }, color: { value: "#ff6f1f" }, move: { enable: true, speed: 1, direction: "top" } }
+
+  particles: {
+
+    number: {
+      value: 25
+    },
+
+    color: {
+      value: "#ff6f1f"
+    },
+
+    opacity: {
+      value: 0.35
+    },
+
+    size: {
+      value: 3
+    },
+
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "top",
+      outModes: {
+        default: "out"
+      }
+    }
+
+  }
+
 });
+
 </script>
 
 </body>
