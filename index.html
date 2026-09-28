@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
 
+<!-- =========================================================
+     VEXA TEMPORARY MAINTENANCE MODE
+     DELETE ONLY THIS BLOCK WHEN MAINTENANCE IS COMPLETE
+     ========================================================= -->
+<script>
+  window.location.replace("maintenance.html");
+</script>
+<!-- ========================================================= -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D9J7PN0HL"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -436,37 +446,6 @@ tsParticles.load("hero-bubbles", {
 
 });
 
-</script>
-
-
-<!-- VEXA Maintenance Redirect -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const maintenancePage = "maintenance.html";
-
-  document.querySelectorAll("a[href]").forEach(function (link) {
-    const href = link.getAttribute("href");
-
-    if (!href) return;
-
-    // Leave external links, email links, phone links,
-    // and page anchors untouched.
-    if (
-      href.startsWith("http://") ||
-      href.startsWith("https://") ||
-      href.startsWith("mailto:") ||
-      href.startsWith("tel:") ||
-      href.startsWith("#")
-    ) {
-      return;
-    }
-
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      window.location.href = maintenancePage;
-    });
-  });
-});
 </script>
 
 </body>
