@@ -5,9 +5,14 @@
 <title>The VEXA Standard — Execution Systems</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- tsParticles -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <style>
+/* =========================
+   BASE
+========================= */
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -15,136 +20,313 @@ body {
   color: #ffffff;
   overflow-x: hidden;
 }
+
+/* =========================
+   HEADER
+========================= */
+
 header {
   background-color: #081523;
   padding: 25px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
-header img { height: 55px; }
+
+header img {
+  height: 55px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 40px;
   font-weight: 500;
+  transition: opacity 0.2s ease;
 }
+
+nav a:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   padding: 120px 20px 80px;
   text-align: center;
   position: relative;
+  overflow: hidden;
+  min-height: 250px;
 }
+
+/* Particle background */
 #hero-bubbles {
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
 }
+
 .hero h1 {
   font-size: 46px;
   text-shadow: 0 0 15px #1f6fff, 0 0 30px #ff6f1f;
   position: relative;
   z-index: 1;
 }
+
 .hero p {
   font-size: 22px;
   max-width: 900px;
   margin: auto;
   position: relative;
   z-index: 1;
+  line-height: 1.6;
 }
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
 .section {
   background-color: rgba(15,36,58,0.9);
   padding: 80px 20px;
 }
+
 .card {
   background-color: #081523;
   padding: 40px;
   border-radius: 12px;
   max-width: 950px;
   margin: auto;
+  box-sizing: border-box;
 }
+
 .card h2 {
   margin-top: 0;
+  margin-bottom: 20px;
 }
+
 .card p {
   line-height: 1.7;
   font-size: 18px;
 }
+
 .card ul {
   margin-top: 20px;
+  padding-left: 25px;
 }
+
 .card li {
   margin-bottom: 10px;
 }
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   background-color: #081523;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
   color: #8fa6bf;
   font-size: 14px;
+}
+
+footer img {
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  header {
+    padding: 25px 30px;
+  }
+
+  nav a {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  header img {
+    height: 48px;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 8px 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 90px 20px 70px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .card {
+    padding: 30px 25px;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 75px 18px 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  nav a {
+    margin: 6px 8px;
+    font-size: 13px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
   <img src="logo.png" alt="VEXA Logo">
+
   <nav>
     <a href="https://achilles013.github.io/vexa-sales-page/index.html">Home</a>
     <a href="about.html">The VEXA Standard</a>
     <a href="products.html">Products</a>
-    <a href="trusted-ai-robotics/index.html">VEXA Trusted AI & Robotics</a>
+    <a href="trusted-ai-robotics/index.html">VEXA Trusted AI &amp; Robotics</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
+
+  <!-- Particle background -->
   <div id="hero-bubbles"></div>
 
   <h1>The VEXA Standard</h1>
+
   <p>
-    Execution systems built for clarity, precision, and real-world application — from beginners learning the fundamentals to professionals operating in high-stakes environments.
+    Execution systems built for clarity, precision, and real-world application —
+    from beginners learning the fundamentals to professionals operating in
+    high-stakes environments.
   </p>
+
 </section>
 
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
 <section class="section">
+
   <div class="card">
 
     <p>
-      <strong>VEXA builds execution systems for professionals operating in complex, high-stakes environments where precision determines outcomes.</strong>
+      <strong>
+        VEXA builds execution systems for professionals operating in complex,
+        high-stakes environments where precision determines outcomes.
+      </strong>
     </p>
 
     <p>
-      We don’t teach theory. We engineer frameworks that move leaders from strategy to execution with clarity, speed, and zero ambiguity.
+      We don’t teach theory. We engineer frameworks that move leaders from
+      strategy to execution with clarity, speed, and zero ambiguity.
     </p>
 
     <h2>What We Build</h2>
 
     <p>
-      VEXA develops systems, strategies, and training programs reverse-engineered from real operational contexts—market expansion,
-      enterprise sales execution, organizational scaling, and high-pressure decision-making under board-level scrutiny.
+      VEXA develops systems, strategies, and training programs reverse-engineered
+      from real operational contexts—market expansion, enterprise sales execution,
+      organizational scaling, and high-pressure decision-making under board-level scrutiny.
     </p>
 
     <p>
-      These are not academic models or motivational courses. They are structured frameworks designed for immediate deployment
-      in environments where execution failure has material consequences.
+      These are not academic models or motivational courses. They are structured
+      frameworks designed for immediate deployment in environments where execution
+      failure has material consequences.
     </p>
 
     <h2>Who Uses VEXA</h2>
 
     <p>
-      Senior leaders and operators across enterprise, private capital, and growth-stage organizations who demand repeatable execution—not improvisation.
+      Senior leaders and operators across enterprise, private capital, and growth-stage
+      organizations who demand repeatable execution—not improvisation.
     </p>
 
     <p>
-      Our frameworks are applied by professionals responsible for complex pipelines, cross-border expansion initiatives,
-      and operations within highly regulated industries—where the margin for error is measured in basis points, not percentages.
+      Our frameworks are applied by professionals responsible for complex pipelines,
+      cross-border expansion initiatives, and operations within highly regulated
+      industries—where the margin for error is measured in basis points, not percentages.
     </p>
 
     <p>
-      At the same time, VEXA is intentionally built to support newcomers and beginners who want a structured, ethical,
-      and practical entry point into professional execution frameworks—without hype, shortcuts, or unrealistic promises.
+      At the same time, VEXA is intentionally built to support newcomers and beginners
+      who want a structured, ethical, and practical entry point into professional
+      execution frameworks—without hype, shortcuts, or unrealistic promises.
     </p>
 
     <h2>The VEXA Standard</h2>
@@ -161,32 +343,132 @@ footer {
     </p>
 
     <p>
-      Built for professionals—and future professionals—who understand that operational excellence isn’t optional. It’s the baseline.
+      Built for professionals—and future professionals—who understand that
+      operational excellence isn’t optional. It’s the baseline.
     </p>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
   <img src="logo.png" alt="VEXA Logo">
-  <div>© 2026 VEXA. All rights reserved.</div>
+
+  <div>
+    © 2026 VEXA. All rights reserved.
+  </div>
+
 </footer>
 
-<style>
-  footer {
-    background-color: #081523;
-    padding: 40px 20px;
-    text-align: center;
-    color: #8fa6bf;
-    font-size: 14px;
+
+<!-- =========================
+     PARTICLE SYSTEM
+========================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (typeof tsParticles === "undefined") {
+    console.warn("VEXA: tsParticles failed to load.");
+    return;
   }
 
-  footer img {
-    height: 28px; /* changed from 40px to make it smaller */
-    margin-bottom: 10px;
-  }
-</style>
+  tsParticles.load("hero-bubbles", {
+    fullScreen: {
+      enable: false
+    },
 
+    background: {
+      color: {
+        value: "transparent"
+      }
+    },
+
+    fpsLimit: 60,
+
+    particles: {
+      number: {
+        value: 45,
+        density: {
+          enable: true,
+          area: 900
+        }
+      },
+
+      color: {
+        value: [
+          "#1f6fff",
+          "#ff6f1f",
+          "#4d8dff"
+        ]
+      },
+
+      opacity: {
+        value: 0.35,
+        random: true
+      },
+
+      size: {
+        value: {
+          min: 1,
+          max: 4
+        },
+        random: true
+      },
+
+      move: {
+        enable: true,
+        speed: 0.7,
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: {
+          default: "out"
+        }
+      },
+
+      links: {
+        enable: true,
+        distance: 130,
+        color: "#1f6fff",
+        opacity: 0.12,
+        width: 1
+      }
+    },
+
+    interactivity: {
+      detectsOn: "canvas",
+
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab"
+        },
+
+        resize: true
+      },
+
+      modes: {
+        grab: {
+          distance: 150,
+          links: {
+            opacity: 0.25
+          }
+        }
+      }
+    },
+
+    detectRetina: true
+  });
+
+});
+</script>
 
 </body>
 </html>
